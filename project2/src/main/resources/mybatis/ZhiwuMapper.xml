@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.xm.mapper.ZhiwuMapper">
+	<sql id="Base_Column_List">
+		ID,ZHIWUID,ZHIWUMC,USED
+  	</sql>
+  	
+  	<resultMap id="ZhiwuResultMap" type="com.xm.entity.Zhiwu" >
+		<id column="ID" property="id" jdbcType="INTEGER"/>
+	    <result column="ZHIWUID" property="zhiwuid" jdbcType="INTEGER" />
+	    <result column="ZHIWUMC" property="zhiwumc" jdbcType="VARCHAR" />
+	    <result column="USED" property="isused" jdbcType="INTEGER" />
+  	</resultMap>
+  	
+  	<!-- 查询所有 -->
+	<select id="searchAll" resultMap="ZhiwuResultMap">
+		SELECT
+	    <include refid="Base_Column_List" />
+	    FROM ZHIWU WHERE USED = 1 ORDER BY ID ASC
+	</select>
+</mapper>

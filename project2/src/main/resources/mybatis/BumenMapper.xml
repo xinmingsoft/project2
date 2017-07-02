@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.xm.mapper.BumenMapper">
+	<sql id="Base_Column_List">
+		ID,BUMENMC,BUMENZW,USED
+  	</sql>
+  	
+  	<resultMap id="BumenResultMap" type="com.xm.entity.Bumen" >
+		<id column="ID" property="id" jdbcType="INTEGER"/>
+	    <result column="BUMENMC" property="bumenmc" jdbcType="VARCHAR" />
+	    <result column="BUMENZW" property="bumenzw" jdbcType="INTEGER" />
+	    <result column="USED" property="isused" jdbcType="INTEGER" />
+  	</resultMap>
+  	
+  	
+  	<resultMap id="BumenAndZhiwuResultMap" type="com.xm.vo.BumenVo" >
+		<id column="ID" property="id" jdbcType="INTEGER"/>
+	    <result column="BUMENMC" property="bumenmc" jdbcType="VARCHAR" />
+	    <result column="BUMENZW" property="bumenzw" jdbcType="INTEGER" />
+	    <result column="ZHIWUMC" property="zhiwumc" jdbcType="VARCHAR" />
+  	</resultMap>
+  	
+	<!-- 添加 -->
+	<insert id="add" parameterType="com.xm.entity.Bumen">
+		INSERT INTO BUMEN
+			(BUMENMC,BUMENZW) 
+		VALUES
+			(#{bumenmc},#{bumenzw})
+	</insert>
+	<!-- 查询部门所有记录 -->
+	<select id="searchAll" resultMap="BumenResultMap">
+		SELECT
+	    <include refid="Base_Column_List" />
+	    FROM BUMEN WHERE USED = 1 ORDER BY ID ASC
+	</select>
+	
+	<!-- 多表查询 -->
+	<select id="getData" resultMap="BumenAndZhiwuResultMap">
+		SELECT B.ID,B.BUMENMC,B.BUMENZW,Z.ZHIWUMC 
+		FROM BUMEN B LEFT JOIN ZHIWU Z ON B.BUMENZW = Z.ZHIWUID 
+		WHERE Z.USED = 1 ORDER BY B.ID ASC
+	</select>
+</mapper>
