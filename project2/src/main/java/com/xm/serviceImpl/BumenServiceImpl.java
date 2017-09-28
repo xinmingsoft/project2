@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.xm.entity.Bumen;
 import com.xm.mapper.BumenMapper;
 import com.xm.service.BumenService;
-import com.xm.vo.BumenVo;
+import com.xm.vo.BumenVO;
 
 @Service
 @Transactional
@@ -47,8 +47,8 @@ public class BumenServiceImpl implements BumenService {
 		return null;
 	}
 	
-	public List<BumenVo> getData() {
-		List<BumenVo> list = bumenmapper.getData();
+	public List<BumenVO> getData() {
+		List<BumenVO> list = bumenmapper.getData();
 		return list;
 	}
 

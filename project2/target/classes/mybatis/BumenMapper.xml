@@ -14,7 +14,7 @@
   	</resultMap>
   	
   	
-  	<resultMap id="BumenAndZhiwuResultMap" type="com.xm.vo.BumenVo" >
+  	<resultMap id="BumenAndZhiwuResultMap" type="com.xm.vo.BumenVO" >
 		<id column="ID" property="id" jdbcType="INTEGER"/>
 	    <result column="BUMENMC" property="bumenmc" jdbcType="VARCHAR" />
 	    <result column="BUMENZW" property="bumenzw" jdbcType="INTEGER" />

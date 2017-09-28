@@ -3,7 +3,7 @@ package com.xm.mapper;
 import java.util.List;
 
 import com.xm.entity.Bumen;
-import com.xm.vo.BumenVo;
+import com.xm.vo.BumenVO;
 
 public interface BumenMapper {
 	
@@ -17,5 +17,5 @@ public interface BumenMapper {
 
 	public Bumen searchById(int id);
 	
-	public List<BumenVo> getData();
+	public List<BumenVO> getData();
 }

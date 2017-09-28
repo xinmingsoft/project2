@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import com.github.pagehelper.PageHelper;
 import com.xm.entity.Bumen;
 import com.xm.service.BumenService;
-import com.xm.vo.BumenVo;
+import com.xm.vo.BumenVO;
 
 @Controller
 @RequestMapping(value = "/bumen")
@@ -53,7 +53,7 @@ public class BumenController {
 	@ResponseBody
 	@RequestMapping(value = "/getData")
 	public Object getData(HttpServletRequest request,HttpServletResponse response){
-		List<BumenVo> list = bumenService.getData();
+		List<BumenVO> list = bumenService.getData();
 		return list;
 	}
 	

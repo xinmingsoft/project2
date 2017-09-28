@@ -1,6 +1,6 @@
 package com.xm.vo;
 
-public class BumenVo {
+public class BumenVO {
 	private int id;
 	private String bumenmc;
 	private String bumenzw;

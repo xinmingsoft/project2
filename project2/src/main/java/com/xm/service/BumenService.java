@@ -3,7 +3,7 @@ package com.xm.service;
 import java.util.List;
 
 import com.xm.entity.Bumen;
-import com.xm.vo.BumenVo;
+import com.xm.vo.BumenVO;
 
 public interface BumenService {
 	public Boolean add(Bumen bumen);
@@ -16,5 +16,5 @@ public interface BumenService {
 	
 	public Bumen searchById(int id);
 	
-	public List<BumenVo> getData();
+	public List<BumenVO> getData();
 }
