@@ -24,6 +24,7 @@ public class AopController {
     @Pointcut("execution(public * com.xm.controller.*.*(..))")
     //Point签名 只是签名
     public void log(){
+    	
     }
      
     //指定Pointcut签名
