@@ -8,11 +8,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.xm.entity.Zhiwu;
 import com.xm.mapper.ZhiwuMapper;
-import com.xm.service.IBaseService;
+import com.xm.service.ZhiwuService;
 
 @Service
 @Transactional
-public class ZhiwuService implements IBaseService<Zhiwu> {
+public class ZhiwuServiceImpl implements ZhiwuService {
 	
 	@Autowired
 	ZhiwuMapper zhiwuMapper;
@@ -40,5 +40,4 @@ public class ZhiwuService implements IBaseService<Zhiwu> {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
 }

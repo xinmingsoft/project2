@@ -8,12 +8,12 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.xm.entity.Bumen;
 import com.xm.mapper.BumenMapper;
-import com.xm.service.IBaseService;
+import com.xm.service.BumenService;
 import com.xm.vo.BumenVo;
 
 @Service
 @Transactional
-public class BumenService implements IBaseService<Bumen> {
+public class BumenServiceImpl implements BumenService {
 	
 	@Autowired
 	BumenMapper bumenmapper;

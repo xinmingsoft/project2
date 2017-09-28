@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.github.pagehelper.PageHelper;
 import com.xm.entity.Bumen;
-import com.xm.serviceImpl.BumenService;
+import com.xm.service.BumenService;
 import com.xm.vo.BumenVo;
 
 @Controller

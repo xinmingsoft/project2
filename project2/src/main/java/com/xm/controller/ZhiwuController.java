@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.xm.entity.Zhiwu;
-import com.xm.serviceImpl.ZhiwuService;
+import com.xm.service.ZhiwuService;
 
 @Controller
 @RequestMapping(value = "/zhiwu")
